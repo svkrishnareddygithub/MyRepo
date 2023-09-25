@@ -15,6 +15,7 @@ public class Acc_Con_Form {
         acc.Rating=rating;
         acc.Industry=industry;
         insert acc;
+        //sharooq
         Contact con=new Contact();
         con.LastName=lastName;
         con.FirstName=firstName;
