@@ -1,0 +1,27 @@
+<apex:page controller="Wra_Selec_Acc" >
+    <apex:form >  
+        <apex:actionFunction name="fun" action="{!invoke}" reRender="p" />
+    <apex:pageBlock id="pb">
+        <apex:commandButton value="SelAcc" action="{!call}"  />
+     <apex:pageBlockSection columns="2" id="pbs">
+      <apex:pageBlockSectionItem id="pbsi">
+       <apex:pageBlockTable value="{!Records}" var="a" id="pbt">
+         <apex:column >
+           <apex:facet name="header">
+               <apex:inputCheckbox value="{!bl}" id="bl" />
+           </apex:facet>
+             <apex:inputCheckbox value="{!a.flag}" onclick="fun();"  />
+         </apex:column>
+         <apex:column value="{!a.acc.name}" headerValue="Name" />
+         <apex:column value="{!a.acc.rating}" headerValue="Rating" />
+       </apex:pageBlockTable>
+       </apex:pageBlockSectionItem>
+         <apex:pageBlockSectionItem >
+          <apex:pageBlockTable value="{!sel}" var="s" id="p">
+              <apex:column value="{!s.acc.name}" headerValue="Name" />
+          </apex:pageBlockTable>
+         </apex:pageBlockSectionItem>
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

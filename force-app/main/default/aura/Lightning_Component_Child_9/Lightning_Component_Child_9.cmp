@@ -1,0 +1,7 @@
+<aura:component > 
+    <aura:registerEvent name="secodEvent" type="c:Lightning_Component_Event_9" />
+    <div class="sap">
+    <lightning:input label="Name" type="String" aura:id="accName"/>
+    <lightning:button label="Submit" onclick="{!c.call}"/>
+    </div>
+</aura:component>

@@ -1,0 +1,13 @@
+<apex:page controller="Sixth_Task" >    
+    <apex:form >
+    <apex:pageBlock title="ContactDetails">
+        <apex:commandButton value="next" action="{!nextC}" />
+        <apex:pageBlockSection >
+            <apex:inputText value="{!con.lastName}" label="LastName"/>
+            <apex:inputText value="{!con.firstName}" label="firstName"/>
+            <apex:inputText value="{!con.email}" label="Email"/>
+            <apex:inputText value="{!con.phone}" label="Phone"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+   </apex:form>
+</apex:page>

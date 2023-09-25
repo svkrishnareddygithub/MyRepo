@@ -1,0 +1,66 @@
+<apex:page >
+<META HTTP-EQUIV="Content-type" CONTENT="text/html;charset=UTF-8"/>
+    <style>
+     .call{
+      border: 1px solid red;
+       width:30%;
+       padding: 30px ;
+       background-color: #cdeffa;
+       margin: 25px 50px 75px 100px;
+       }
+   </style>
+<form class="call" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+   <h1 style="font-size: 25px">
+       Registration Form
+    </h1><br/><br/>
+    <input type="hidden" name="oid" value="00D5j000003gAbd"/>
+    <input type="hidden" name="retURL" value="http://websynergies-dev-ed.my.salesforce.com" />
+
+    <label for="first_name">First Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br/><br/>
+
+    <label for="last_name">Last Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br/><br/>
+
+<label for="email">Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br/><br/>
+
+    <label for="phone">Phone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br/><br/>
+
+Qualification: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select  id="00N5j00000Do3WP" name="00N5j00000Do3WP" title="Qualification"><option value="">--None--</option><option value="BTech">BTech</option>
+<option value="MTech">MTech</option>
+<option value="Bsc">Bsc</option>
+</select><br/><br/>
+
+Cource: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select  id="00N5j00000Do3X8" name="00N5j00000Do3X8" title="Cource"><option value="">--None--</option><option value="CSE">CSE</option>
+<option value="ECE">ECE</option>
+<option value="Mech">Mech</option>
+<option value="Specialization">Specialization</option>
+<option value="Computers">Computers</option>
+    </select><br/><br/>
+
+Subject: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select  id="00N5j00000Do3fs" name="00N5j00000Do3fs" title="Subject"><option value="">--None--</option><option value="Java">Java</option>
+<option value="Python">Python</option>
+<option value="TD">TD</option>
+<option value="DOM">DOM</option>
+<option value="Computers">Computers</option>
+</select><br/><br/>
+
+    Percentage: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input  id="00N5j00000DoxWa" name="00N5j00000DoxWa" size="20" type="text" /><br/><br/>
+
+Date&amp;Time:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="dateInput"><input  id="00N5j00000DoxYq" name="00N5j00000DoxYq" size="20" type="text" /></span><br/><br/>
+
+    CheckBox:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input  id="00N5j00000DoxZF" name="00N5j00000DoxZF" type="checkbox" value="1" /><br/><br/>
+
+UserName:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input  id="00N5j00000Dp3b9" maxlength="25" name="00N5j00000Dp3b9" size="20" type="text" /><br/><br/>
+
+    <label for="street">Street&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><textarea name="street"></textarea><br/><br/>
+
+<label for="city">City&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br/><br/>
+
+    <label for="zip">Zip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input  id="zip" maxlength="20" name="zip" size="20" type="text" /><br/><br/>
+
+    <label for="state">State/Province&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input  id="state" maxlength="20" name="state" size="20" type="text" /><br/><br/>
+
+    <input type="submit" name="submit" />
+
+</form>
+
+</apex:page>

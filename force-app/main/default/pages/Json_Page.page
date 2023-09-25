@@ -1,0 +1,7 @@
+<apex:page controller="Json_Ex2">
+    <apex:sectionHeader title="JSON EXAMPLE"/>
+    <apex:dataTable value="{!mapObj}" var="a" frame="border" cellpadding="5px" rules="rows" width="100%">                                                                                
+        <apex:column value="{!a}" headerValue="Key"/>
+        <apex:column value="{!mapObj[a]}" headerValue="Value"/>
+    </apex:dataTable>
+</apex:page>

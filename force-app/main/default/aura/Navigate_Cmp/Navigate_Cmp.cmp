@@ -1,0 +1,34 @@
+<aura:component >
+    <aura:attribute name="steps" type="String" default="1"/>
+    <div>
+        <lightning:progressIndicator currentStep="{!v.steps}" type="path">
+            <lightning:progressStep label="Account" value="1" />
+            <lightning:progressStep label="Contact" value="2"/>
+            <lightning:progressStep label="Opportunity" value="3"/>
+        </lightning:progressIndicator>
+    </div>
+    <div>
+        <lightning:tabset selectedTabId="{!v.steps}">
+          <lightning:tab label="Account Info" id="1">
+              <lightning:input label="Name" aura:id="name"/>
+              <lightning:input label="Phone" aura:id="phone"/>
+              <lightning:input label="Rating" aura:id="rating"/>
+              
+              <lightning:button label="Next" onclick="{!c.next}"/>
+          </lightning:tab>
+          <lightning:tab label="Contact Info" id="2">
+              <lightning:input label="lName" aura:id="name"/>
+              <lightning:input label="fName" aura:id="name"/>
+              <lightning:input label="email" aura:id="name"/>
+              <lightning:button label="Prev" onclick="{!c.prev}"/>
+              <lightning:button label="Next" onclick="{!c.next}"/>
+          </lightning:tab>
+            <lightning:tab label="Oppportunity Info" id="3">
+              <lightning:input label="Opp Name" aura:id="name"/>
+              <lightning:input label="Stage" aura:id="name"/> 
+                <lightning:button label="Prev" onclick="{!c.prev}"/>
+              
+          </lightning:tab>
+        </lightning:tabset>
+    </div>
+</aura:component>

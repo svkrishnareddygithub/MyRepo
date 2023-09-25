@@ -1,0 +1,14 @@
+<aura:component >
+    <lightning:card>
+	<aura:set attribute="title">
+        <lightning:avatar fallbackIconName="standard:avatar" />
+        &nbsp;&nbsp; ICICI APPLICTION <br/>
+    </aura:set>
+    <aura:set attribute="actions">
+      <lightning:buttonGroup>
+          <lightning:button label="Login" iconName="utility-login"/>
+          <lightning:button iconName="utility:save"/>
+        </lightning:buttonGroup>
+    </aura:set>
+        </lightning:card>
+</aura:component>

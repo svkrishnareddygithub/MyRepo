@@ -1,0 +1,27 @@
+<aura:component >
+    <aura:attribute name="aName" type="String" />
+    <aura:attribute name="aPhone" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:card>
+    <lightning:input label="Name" type="String" aura:id="nm"/>
+    <lightning:input label="Phone" type="String" aura:id="ph"/>
+    <lightning:button label="submit" onclick="{!c.handleMe}"/>
+    
+    </lightning:card>
+     <lightning:card>
+      <table>
+        <thead>
+            <tr>
+              <th>Name</th> 
+              <th>Phone</th>
+          </tr>
+        </thead>  
+       <tbody>
+
+                <tr>{!v.aName}</tr>
+                <tr>{!v.aPhone}</tr>
+     
+       </tbody>
+      </table>
+   </lightning:card>
+</aura:component>

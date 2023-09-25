@@ -1,0 +1,7 @@
+<aura:component controller="Aura_Example_1">
+    <lightning:input label="Amount" aura:id="amount" type="number"/>
+    <lightning:input label="Rate" aura:id="rate" type="number"/>
+    <lightning:input label="Years" aura:id="years" type="number"/>
+    <lightning:input label="Intrest" aura:id="int" type="number"/>
+    <lightning:buttonIcon iconName="utility:settings"  alternativeText="Settings"  onclick="{!c.call}"/>
+</aura:component>

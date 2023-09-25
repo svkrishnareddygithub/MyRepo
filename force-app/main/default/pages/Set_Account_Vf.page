@@ -1,0 +1,7 @@
+<apex:page controller="Set_Account_Names" action="{!call}">
+    <apex:pageblock >
+      <apex:pageBlockTable value="{!s}" var="a">
+          <apex:column value="{!a}" headerValue="AccountName" />
+      </apex:pageBlockTable>
+    </apex:pageblock>
+</apex:page>

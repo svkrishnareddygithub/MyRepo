@@ -1,0 +1,31 @@
+<apex:page controller="Search_text"  >
+    
+    <apex:form id="fm"  >
+        <apex:pageMessages ></apex:pageMessages>
+        <br/>
+           Name    <input type="text" value="{!accName}"/>
+        <apex:commandButton action="{!search_text}" value="Search Text" reRender="fm"  />
+        <br/><br/>
+     <html>
+       <head>
+           <body>
+               <table width="100%">
+          <tr>
+            <th>AccountName</th>
+            <th>Phone</th>
+            <th>Rating</th>
+          </tr>
+           <apex:repeat value="{!account}" var="a"  >
+               <tr>
+                 <td>{!a.name}</td>
+                 <td>{!a.phone}</td>
+                 <td>{!a.rating}</td>
+               </tr>
+           </apex:repeat>
+      </table>
+           </body>
+         </head>         
+        </html>
+      
+    </apex:form>
+</apex:page>

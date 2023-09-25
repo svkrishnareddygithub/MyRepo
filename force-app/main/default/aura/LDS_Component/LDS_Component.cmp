@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId"  >
+	<aura:attribute name="recordId" type="String" />
+    <aura:attribute name="targetRec" type="Object" />
+    <aura:attribute name="accName" type="Object" />
+    <aura:attribute name="error" type="String" />
+    <force:recordData aura:id="recordId" 
+                      fields="Id,Name,Phone,Rating" 
+                      recordId="{!v.recordId}"
+                      layoutType="FULL"
+                      targetRecord="{!v.targetRec}"
+                      targetFields="{!v.accName}"
+                      targetError="{!v.error}"
+                      />
+    <lightning:card iconName="standard:account" title="Account" >
+        <lightning:input label="AccountName" value="{!v.accName.Name}"/>
+        <lightning:input label="Rating" value="{!v.accName.Rating}"/>
+        <lightning:input label="Phone" value="{!v.accName.Phone}"/>
+    </lightning:card>
+</aura:component>

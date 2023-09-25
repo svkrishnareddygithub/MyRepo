@@ -1,0 +1,56 @@
+<apex:page >
+   <style>
+      .call{
+       text-align: center;
+       border: 1px solid red;
+       width:30%;
+       padding: 25px ;
+       background-color: #cdeffa;
+       margin: 25px 50px 75px 100px;
+       }
+   </style>
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8"/>
+<form class="call" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST"  >
+    <h1 style="text-align: center; font-size: 20px;">
+        Lead Form
+    </h1><br/><br/>
+
+    <input type="hidden" name="oid" value="00D5j000003gAbd"/>
+    <input type="hidden" name="retURL" value="http://https://websynergies-dev-ed.my.salesforce.com/"/>
+
+
+    <input type="hidden" name="debug" value="1" />
+
+    <label for="first_name">First Name </label>&nbsp;&nbsp;&nbsp;&nbsp;<input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br/><br/>
+
+    <label for="last_name">Last Name </label> &nbsp;&nbsp;&nbsp;&nbsp;<input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br/><br/>
+
+    <label for="email">Email </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input  id="email" maxlength="80" name="email" size="20" type="text" /><br/><br/>
+
+    <label for="company">Company </label>&nbsp;&nbsp;&nbsp;&nbsp;<input  id="company" maxlength="40" name="company" size="20" type="text" /><br/><br/>
+
+    <label for="city">City </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input  id="city" maxlength="40" name="city" size="20" type="text" /><br/><br/>
+
+   Qualification &nbsp;&nbsp;&nbsp;&nbsp;<select  id="00N5j00000Do3WP" name="00N5j00000Do3WP" title="Qualification"><option value="">--None--</option><option value="BTech">BTech</option>
+   <option value="MTech">MTech</option>
+  <option value="Bsc">Bsc</option>
+  </select><br/><br/>
+
+  Cource &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select  id="00N5j00000Do3X8" name="00N5j00000Do3X8" title="Cource"><option value="">--None--</option><option value="CSE">CSE</option>
+   <option value="ECE">ECE</option>
+    <option value="Mech">Mech</option>
+    <option value="Specialization">Specialization</option>
+    <option value="Computers">Computers</option>
+    </select><br/><br/>
+
+   Subject &nbsp;&nbsp;&nbsp;&nbsp;<select  id="00N5j00000Do3fs" name="00N5j00000Do3fs" title="Subject"><option value="">--None--</option><option value="Java">Java</option>
+      <option value="Python">Python</option>
+      <option value="TD">TD</option>
+      <option value="DOM">DOM</option>
+      <option value="Computers">Computers</option>
+      </select><br/><br/>
+
+   <input style="margin-left:45px" type="submit" name="submit" />
+
+  </form>
+</apex:page>

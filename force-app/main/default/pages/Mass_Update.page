@@ -1,0 +1,2 @@
+<apex:page standardController="Opportunity" extensions="Mass_Update" recordSetVar="items" action="{!call}">
+</apex:page>

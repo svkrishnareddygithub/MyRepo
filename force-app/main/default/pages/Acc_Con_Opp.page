@@ -1,0 +1,23 @@
+<apex:page controller="Acc_Con_Opp">
+    <apex:form >
+    <apex:pageBlock >
+        <apex:commandButton value="Save" action="{!call}"/>
+      <apex:pageBlockSection title="Account details">
+          <apex:inputText value="{!acc.name}" label="Name"/>
+          <apex:inputText value="{!acc.rating}" label="rating"/>
+          <apex:inputText value="{!acc.phone}" label="phone"/>
+          <apex:inputText value="{!acc.industry}" label="industry"/>
+      </apex:pageBlockSection>  
+        <apex:pageBlockSection title="Contact Details">
+          <apex:inputText value="{!con.lastName}" label="lastName"/>
+          <apex:inputText value="{!con.firstName}" label="firstName"/>
+          <apex:inputText value="{!acc.phone}" label="phone"/>
+      </apex:pageBlockSection>
+        <apex:pageBlockSection title="Opportunity Details">
+          <apex:inputText value="{!opp.name}" label="OppName"/>
+          <apex:inputText value="{!opp.closeDate}" label="closeDate"/>
+          <apex:inputText value="{!opp.stagename}" label="StageName"/>
+      </apex:pageBlockSection>
+      </apex:pageBlock>
+    </apex:form>
+</apex:page>

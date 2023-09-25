@@ -1,0 +1,26 @@
+<template>
+    <c-parent_acclist oncreateme={handleChangeAction}></c-parent_acclist>
+    <!-- <lightning-card title="Contact List">
+        <table>
+            <thead>
+                <tr>
+                    <th>LastName</th>
+                    <th>Firstname</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={records} for:item="conItem">
+                    <tr key={conItem.Id}>
+                        <td>{conItem.LastName}</td>
+                        <td>{conItem.FirstName}</td>
+                        <td>{conItem.Email}</td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </lightning-card> -->
+    <lightning-card>
+        <lightning-datatable key-field="Id" data={records} columns={col} ></lightning-datatable>
+    </lightning-card>
+</template>

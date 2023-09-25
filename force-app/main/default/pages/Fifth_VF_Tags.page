@@ -1,0 +1,78 @@
+<apex:page controller="Fifth_Apex"  action="{!call}">
+   <apex:form >
+       <apex:pageMessages ></apex:pageMessages> 
+    <apex:sectionHeader title="AllTags" subtitle="Tags" />
+    <apex:pageBlock >
+       
+          <apex:pageBlockButtons >
+            <apex:commandButton value="Save" />
+              <apex:commandLink value="Krishna"/>
+            
+              <apex:outputLink />
+          </apex:pageBlockButtons>
+        
+        
+       <apex:pageBlockSection title="input,outputText" collapsible="false">
+         <apex:inputField value="{!acc.Name}" />
+         <apex:outputField value="{!acc.Name}"  />
+         <apex:inputField value="{!acc.Email__c}"/>
+         <apex:outputField value="{!acc.Industry}"/>
+         <apex:outputField value="{!acc.Email__c}"/>
+         <apex:inputText value="{!acc.Name}" label="Name"/>
+         <apex:inputText value="{!acc.Rating}" label="Rating"/>
+         <apex:outputText value="{!acc.Name}" label="Name"/>
+         <apex:outputText value="{!acc.Rating}" label="Rating"/>
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="pbsi Name" />
+            <apex:inputText value="{!acc.name}" />
+        </apex:pageBlockSectionItem>
+       </apex:pageBlockSection>
+        
+       <apex:pageBlockSection title="Tab TabPanel,datalist" >
+         <apex:tabPanel >
+             <apex:tab label="Account" >
+               <apex:dataList value="{!accList}" var="c">
+                 {!c.name}
+               </apex:dataList>
+             </apex:tab>
+             <apex:tab label="Contact"/>
+             <apex:tab label="Opportunity"/>
+         </apex:tabPanel>
+       </apex:pageBlockSection>
+        
+      <apex:pageBlockSection title="PageblockTable">
+         <apex:pageBlockTable value="{!accList}" var="a">
+          <apex:column value="{!a.name}"/>
+          <apex:column value="{!a.rating}"/>
+          <apex:column value="{!a.Phone}"/>
+         </apex:pageBlockTable>
+      </apex:pageBlockSection>  
+       
+        <apex:pageBlockSection title="Repeate">
+            <table>
+                  <tr>
+                    <th>AccountName</th>
+                  </tr>
+                  <apex:repeat value="{!accList}" var="c">
+                    <tr>
+                      <td>{!c.Name}</td>
+                    </tr>
+                  </apex:repeat>
+            </table>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="selectList,datatable, selectRadio" >
+          <apex:selectList size="1" value="{!fields}" >
+              <apex:selectOptions value="{!options}" />
+          </apex:selectList>
+            <apex:selectRadio value="{!fields}" > 
+              <apex:selectOptions value="{!options}"/>
+          </apex:selectRadio>
+            <apex:dataTable value="{!accList}" var="d">
+                <apex:column value="{!d.name}" headerValue="Name" />
+                <apex:column value="{!d.rating}" headerValue="Rating"/>
+            </apex:dataTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

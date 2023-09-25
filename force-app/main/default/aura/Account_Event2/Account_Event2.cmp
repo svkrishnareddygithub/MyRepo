@@ -1,0 +1,22 @@
+<aura:component controller="ContactList">
+    <aura:attribute name="contacts" type="Contact[]"/>
+    <aura:handler event="c:Account_Event" action="{!c.doInit}"/>
+    <lightning:card>
+    <div>
+      <table>
+        <thead>
+            <tr>
+              <th>LastName</th> 
+              <th>FirstName</th>
+          </tr>
+        </thead>  
+       <tbody>
+            <aura:iteration items="{!v.contacts}" var="a">
+                <tr>{!a.LastName}</tr>
+                <tr>{!a.FirstName}</tr>
+           </aura:iteration>
+       </tbody>
+      </table>
+    </div>
+   </lightning:card>
+</aura:component>

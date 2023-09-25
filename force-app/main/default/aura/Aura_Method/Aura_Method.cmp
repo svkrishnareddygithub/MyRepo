@@ -1,0 +1,19 @@
+<aura:component >
+    <aura:attribute name="Name" type="String" />
+    <aura:attribute name="Rating" type="String"/>
+    <aura:attribute name="Phone" type="String" />
+    <aura:attribute name="ids" type="ID"/>
+    <aura:method name="call" action="{!c.call}" >
+        <aura:attribute name="accName" type="String"/>
+        <aura:attribute name="accRating" type="String"/>
+        <aura:attribute name="accPhone" type="String" />
+        <aura:attribute name="accId" type="ID"/>
+    </aura:method>
+    
+    <lightning:card title="Action Override" >
+        Name: {!v.Name} <br/>
+        Rating : {!v.Rating} <br/>
+        Phone : {!v.Phone} <br/>
+        Id : {!v.ids}
+    </lightning:card>
+</aura:component>

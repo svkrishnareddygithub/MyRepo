@@ -1,0 +1,45 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId"  controller="Op_Con_Cs">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="record" type="Object"/>
+    <aura:attribute name="simpleRecord" type="Object"/>
+    <aura:attribute name="error" type="String" />
+    <aura:attribute name="contacts" type="Contact[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.call}"/>
+    <force:recordData aura:id="myId" 
+                      recordId="{!v.recordId}" 
+                      targetRecord="{!v.record}"
+                      layoutType="FULL"
+                      fields="Name,Rating,Phone"
+                      targetError="{!v.error}"
+                      targetFields="{!v.simpleRecord}"
+                      mode="EDIT"
+                      />
+    <div>
+      <lightning:card iconName="standard:account" >
+          <lightning:input aura:id="accName" label="Name" value="{!v.simpleRecord.Name}"/>
+          <lightning:input label="Rating" value="{!v.simpleRecord.Rating}"/>
+          <lightning:input label="Phone" value="{!v.simpleRecord.Phone}"/>
+         
+      </lightning:card>
+    </div> 
+    <div>
+        <lightning:card iconName="standard:contact" title="List Of Contacts">
+          <table>
+          <thead>
+            <tr>
+              <th>LastName</th>
+              <th>FirstName</th>
+            </tr>
+          </thead>
+          <tbody>
+            <aura:iteration items="{!v.contacts}" var="a">
+             <tr>
+                <td>{!a.LastName}</td>
+              	<td>{!a.FirstName}</td>
+              </tr>
+             </aura:iteration>
+          </tbody>
+        </table>
+      </lightning:card>    
+    </div>
+</aura:component>

@@ -1,0 +1,11 @@
+<apex:page controller="Login_Form">
+    <apex:form >
+      <apex:pageBlock >
+          <apex:pageBlockSection >
+             <apex:inputText value="{!userName}" label="UserName" />
+              <apex:inputText value="{!password}" label="Password"/>
+              <apex:commandButton value="Login" action="{!call}"/>
+          </apex:pageBlockSection>  
+      </apex:pageBlock>
+    </apex:form>
+</apex:page>

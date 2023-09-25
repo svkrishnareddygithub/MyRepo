@@ -1,0 +1,6 @@
+<aura:component controller="Lightning_Class" >
+    =============================================================================================<br/>
+	 <aura:attribute name="name" type="String" />
+    <lightning:button label="Submit" onclick="{!c.result}"/>
+    Result : {!v.name}
+</aura:component>

@@ -1,0 +1,7 @@
+<aura:component >
+	<aura:template>
+    	<p>
+        	Hi I am Soumya.
+        </p>
+    </aura:template>
+</aura:component>

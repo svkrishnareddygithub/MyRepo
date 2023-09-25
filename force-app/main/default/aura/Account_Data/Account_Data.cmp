@@ -1,0 +1,25 @@
+<aura:component controller="Retrive_AccData" >
+    <lightning:input label="Account Name" type="String" aura:id="aName"/>
+    <aura:attribute name="contacts" type="list"/>
+    <lightning:button label="Submit" onclick="{!c.show}"/>
+    <div class="box">
+      <table >
+      <tHead>
+       <tr>
+          <th>LastName</th> 
+          <th>FirstName</th>
+           <th>Email</th>
+       </tr>
+      </tHead>
+      <tBody>
+     <aura:iteration items="{!v.contacts}" var="a">
+       <tr>
+         <td>{!a.LastName}</td>    
+         <td>{!a.FirstName}</td>
+         <td>{!a.Email}</td>
+        </tr>
+     </aura:iteration>    
+      </tBody>
+      </table>
+    </div>
+</aura:component>

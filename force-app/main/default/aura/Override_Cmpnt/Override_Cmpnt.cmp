@@ -1,0 +1,13 @@
+<aura:component implements="lightning:actionOverride" controller="Apex_Class">
+    <lightning:card iconName="standard:account" title="Account">
+         <aura:set attribute="actions">
+            <lightning:buttonGroup >
+               <lightning:button label="Save" onclick="{!c.submit}"/>
+               <lightning:button label="cancel" onclick="{!c.cancel}"/>
+            </lightning:buttonGroup>
+         </aura:set>
+        <lightning:input aura:id="name" label="Account Name" />
+        <lightning:input aura:id="phone" label="Account Phone" />
+        <lightning:input aura:id="industry" label="Account Industry" />
+    </lightning:card>	
+</aura:component>

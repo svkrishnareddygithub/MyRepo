@@ -1,0 +1,11 @@
+<aura:component controller="Schema_Picklist">
+    <aura:attribute name="ObjName" type="String"/>
+    <aura:attribute name="FieldName" type="String"/>
+    <aura:attribute name="result" type="String[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.invoke}"/>
+    <lightning:select label="{!v.FieldName}" >
+       <aura:iteration items="{!v.result}" var="a">
+           <option value="{!a}">{!a}</option>
+        </aura:iteration>
+    </lightning:select>
+</aura:component>

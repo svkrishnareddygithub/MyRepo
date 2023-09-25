@@ -1,0 +1,11 @@
+<apex:page controller="Show_Phone"  action="{!call}">
+    <apex:pageBlock >
+      
+     <apex:pageBlockTable value="{!accList}" var="a">
+         <apex:column value="{!a.name}"/>
+         <apex:column value="{!a.CustomerPriority__c}"/>
+         <apex:column value="{!a.phone}" rendered="{!flag}" />
+         
+      </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,46 @@
+<apex:page controller="Wrapper_Class">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockButtons >
+                <apex:commandButton value="ADD" action="{!addMe}" reRender="pb" />
+                <apex:commandButton value="RESET" action="{!reset}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+               <apex:pageBlockSectionItem >
+                   <apex:outputLabel value="name"/>
+                   <apex:inputText value="{!name}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                   <apex:outputLabel value="Rating"/>
+                   <apex:inputText value="{!rating}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                   <apex:outputLabel value="Industry"/>
+                   <apex:inputText value="{!industry}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                   <apex:outputLabel value="Phone"/>
+                   <apex:inputText value="{!phone}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                   <apex:outputLabel value="Type"/>
+                   <apex:inputText value="{!type}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                   <apex:outputLabel value="Active"/>
+                   <apex:inputText value="{!active}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!accounts}" var="a" id="pb" >
+                <apex:column value="{! a.name}" headerValue="Name"/>
+                <apex:column value="{!a.rating}" headerValue="Rating"/>
+                <apex:column value="{!a.Phone}" headerValue="Phone"/>
+                <apex:column value="{!a.industry}" headerValue="Industry"/>
+                <apex:column value="{!a.type}" headerValue="Type"/>
+                <apex:column value="{!a.Active__c}" headerValue="Active"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

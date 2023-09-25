@@ -1,0 +1,34 @@
+<aura:component controller="Get_Opp" >
+    <aura:attribute name="Opptys" type="list" />
+    <aura:handler name="init" value="{!this}" action="{!c.show}"/>
+  <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+	<thead>
+		<tr class="slds-line-height_reset">
+			<th class="" scope="col">
+				<div class="slds-truncate" >Opportunity Name</div>
+			</th>
+			<th class="" scope="col">
+				<div class="slds-truncate" title="Account Name">StageName</div>
+			</th>
+			<th class="" scope="col">
+				<div class="slds-truncate" title="Close Date">Close Date</div>
+			</th>
+		</tr>
+	</thead>
+    <aura:iteration items="{!v.Opptys}" var="o">
+	<tbody>
+			<td >
+				{!o.Name}
+			</td>
+			<td >
+				{!o.CloseDate}
+			</td>
+			<td >
+				{!o.StageName}
+			</td>
+	</tbody>
+   </aura:iteration>
+</table>
+        
+   
+</aura:component>

@@ -1,0 +1,4 @@
+<apex:page >
+    <!-- extensions="Send_Mail"
+      standardController="Account"-->
+</apex:page>

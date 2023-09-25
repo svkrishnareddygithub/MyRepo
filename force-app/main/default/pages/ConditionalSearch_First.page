@@ -1,0 +1,18 @@
+<apex:page controller="ConditionalSearch_First" >
+    <apex:form >
+    <apex:pageMessages ></apex:pageMessages>
+    <apex:outputPanel >
+      Name  : <apex:inputText value="{!accName}"  />
+      Email : <apex:inputText value="{!accEmail}" />
+        <apex:commandButton action="{!call}" value="search"  />
+    </apex:outputPanel>
+        <apex:pageBlock >
+          <apex:pageBlockTable value="{!accList}" var="a">
+            <apex:column headerValue="AccountName" >
+                <apex:outputLink value="https://websynergies-dev-ed--c.visualforce.com/apex/Conditional_Search_VF2?id={!a.id}">{!a.name}</apex:outputLink>
+            </apex:column>
+              <apex:column value="{!a.Email__c}"/>  
+          </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,24 @@
+<aura:component >
+    <aura:attribute name="acc" type="list" />
+    <aura:handler event="c:ltng_App_Event" action="{!c.invoke}"/>
+    <lightning:card title="AccountList" iconName="standard:account" >
+        
+            <table>
+               <tr>
+                <th>AccountName</th>
+                <th>Rating</th>
+                <th>Phone</th>
+               </tr>
+               
+                 <aura:iteration items="{!v.acc}" var="a">  
+                     <tr>
+                     <td>{!a.Name}</td>
+                     <td>{!a.Rating}</td>
+                     <td>{!a.Phone}</td>
+                      </tr>
+                 </aura:iteration>
+              
+            </table>
+        
+    </lightning:card>
+</aura:component>

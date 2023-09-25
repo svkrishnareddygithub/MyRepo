@@ -1,0 +1,12 @@
+<apex:page controller="Acc_List_Wra">
+    <apex:sectionHeader title="AccountList"/>
+    <apex:pageBlock >
+       <apex:pageBlockTable value="{!cd}" var="a">
+           <apex:column value="{!a.name}" headerValue="Name"/>
+           <apex:column value="{!a.rating}" headerValue="Rating"/>
+           <apex:column value="{!a.phone}" headerValue="Phone"/>
+           <apex:column value="{!a.industry}" headerValue="Industry"/>
+           <apex:column value="{!a.amount}" headerValue="Amount"/>
+       </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

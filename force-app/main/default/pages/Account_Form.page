@@ -1,0 +1,27 @@
+<apex:page controller="Acc_Con_Form">
+    <apex:sectionHeader title="Form" subTitle="Account_Contact"/>
+   <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockButtons location="both" dir="RTL">
+         <apex:commandButton value="Save" action="{!create}"/>
+        </apex:pageBlockButtons>
+       <apex:pageBlockSection title="AccountDetails" collapsible="false">
+             <apex:inputText value="{!accName}" label="Account Name"/>
+             <apex:inputText value="{!rating}" label="Rating"/>
+           <apex:inputText value="{!industry}" label="Industry"/>
+       </apex:pageBlockSection>
+        
+         <apex:pageBlockSection title="Contact Details">
+             <apex:inputText value="{!lastName}" label="LastName" />
+             <apex:inputText value="{!firstName}" label="FirstName"/>
+           <apex:inputText value="{!email}" label="Email"/>
+       </apex:pageBlockSection>
+        
+         <apex:pageBlockSection title="Opportunity Details">
+             <apex:inputText value="{!opName}" label="Opp Name"/>
+             <apex:inputText value="{!closeDate}" label="Close Date"/>
+           <apex:inputText value="{!stageName}" label="StageName"/>
+       </apex:pageBlockSection>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

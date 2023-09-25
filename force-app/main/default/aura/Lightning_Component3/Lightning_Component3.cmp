@@ -1,0 +1,9 @@
+<aura:component >
+    <lightning:card>
+        <lightning:recordEditForm objectApiName="Contact" recordId="0035j00000AS6vtAAD">
+            <lightning:inputField fieldName="LastName" />
+            <lightning:inputField fieldName="FirstName" />
+            <lightning:inputField fieldName="Email"/>
+    </lightning:recordEditForm>
+    </lightning:card>
+</aura:component>

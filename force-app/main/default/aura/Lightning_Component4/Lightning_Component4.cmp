@@ -1,0 +1,8 @@
+<aura:component >
+   <lightning:card >
+       <div class="box">
+        Name: Krishna <br/>
+        company: webSyn 
+      </div>
+   </lightning:card>
+</aura:component>

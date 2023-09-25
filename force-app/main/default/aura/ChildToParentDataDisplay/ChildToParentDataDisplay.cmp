@@ -1,0 +1,23 @@
+<aura:component >
+   
+	<aura:attribute name="Name" type="String" />
+    <aura:attribute name="Phone" type="String"/>
+    <aura:handler name="two" event="c:ChildToParentData_Evt" action="{!c.call}"/>
+    <c:ChildToParentData/>
+       <lightning:card>
+      <table>
+        <thead>
+            <tr>
+              <th>Name</th> 
+              <th>Phone</th>
+          </tr>
+        </thead>  
+       <tbody>
+
+                <tr>{!v.Name}</tr>
+                <tr>{!v.Phone}</tr>
+     
+       </tbody>
+      </table>
+   </lightning:card>
+</aura:component>

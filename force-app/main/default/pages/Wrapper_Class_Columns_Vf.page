@@ -1,0 +1,27 @@
+<apex:page controller="Wrapper_Class_Columns">
+    <apex:form >
+    <apex:pageblock >
+        <apex:commandButton value="Contacts" action="{!conList}"/>
+      <apex:pageblockTable value="{!Records}" var="a">
+          <apex:column >
+           <apex:facet name="header"><apex:inputCheckbox /></apex:facet>
+              <apex:inputCheckbox value="{!a.flag}"/>
+          </apex:column>
+          <apex:column value="{!a.acc.name}" headerValue="Name"/>
+          <apex:column headervalue="LastName">
+              <apex:pageblockTable value="{!a.con}" var="b">
+                 <apex:column value="{!b.lastName}" />
+              </apex:pageblockTable>
+          </apex:column>
+          <apex:column headervalue="OptyName">
+              <apex:pageblockTable value="{!a.opty}" var="c">
+                 <apex:column value="{!c.name}" />
+              </apex:pageblockTable>
+          </apex:column>
+      </apex:pageblockTable>
+      <apex:pageBlockTable value="{!co}" var="o">
+          <apex:column value="{!o.lastName}" headerValue="lastName" />
+      </apex:pageBlockTable>
+    </apex:pageblock>
+        </apex:form>
+</apex:page>

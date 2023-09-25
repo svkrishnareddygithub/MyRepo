@@ -1,0 +1,11 @@
+<apex:page controller="Prime_Number" >
+    <apex:form >
+      <apex:pageBlock >
+        <apex:pageBlockSection >
+          <apex:inputText value="{!num}" label="Number"/>
+             <apex:outputText value="{!Prime}" label="Result"/>
+        </apex:pageBlockSection>
+        <apex:commandButton action="{!call}" value="submit"/>
+      </apex:pageBlock>
+    </apex:form>
+</apex:page>

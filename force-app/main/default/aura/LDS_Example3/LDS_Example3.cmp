@@ -1,0 +1,33 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId"  >
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="record" type="Object"/>
+    <aura:attribute name="simpleRecord" type="Object"/>
+    <aura:attribute name="error" type="String" />
+    <force:recordData aura:id="myId" 
+                      recordId="{!v.recordId}" 
+                      targetRecord="{!v.record}"
+                      layoutType="FULL"
+                      fields="Name,Rating,Phone"
+                      targetError="{!v.error}"
+                      targetFields="{!v.simpleRecord}"
+                      mode="EDIT"
+                      />
+    <div>
+      <lightning:card iconName="standard:account" >
+          <lightning:input label="Name" value="{!v.simpleRecord.Name}"/>
+          <lightning:input label="Rating" value="{!v.simpleRecord.Rating}"/>
+          <lightning:input label="Phone" value="{!v.simpleRecord.Phone}"/>
+          <lightning:button label="Save" onclick="{!c.call}"/>
+      </lightning:card>
+    </div> 
+    <div>
+       <aura:if isTrue="{!not(empty(v.error))}">
+        <div class="recordError">
+            <ui:message title="Error" severity="error" closable="true">
+                {!v.error}
+            </ui:message>
+        </div>
+    </aura:if>
+    </div>
+    
+</aura:component>

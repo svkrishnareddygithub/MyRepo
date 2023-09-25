@@ -1,0 +1,53 @@
+<apex:page controller="OppTrackingClass">
+    <apex:form id="fm">
+    <apex:sectionHeader title="Opportunity Tracking Create"/>
+    <apex:pageBlock id="tech"> 
+        <apex:pageBlockButtons >
+          <apex:commandButton action="{!invoke}" value="Save" reRender="fm"/>
+        </apex:pageBlockButtons>
+      <apex:pageBlockSection title="Customer Info">
+          <apex:inputField label="Customer" value="{!o.Name}"/>
+          <apex:inputField label="Opportunity Info" value="{!o.Opportunity_Info__c}"/>
+          <apex:inputField label="Source" value="{!o.Source__c}"  />
+          <apex:inputField label="Sales Region" value="{!o.Sales_Region__c}"/>
+          <apex:inputField label="Opportunity Start" value="{!o.Opportunity_Start__c}"/>
+          <apex:inputField label="Sales Contact" value="{!o.Sales_Contact__c}"/>
+          <apex:inputField label="BD Contact" value="{!o.BD_Contact__c}"/>
+          <apex:inputField label="Comments" value="{!o.Comments__c}"/>
+      </apex:pageBlockSection>
+      <apex:pageBlockSection title="Opportunity Info">
+          <apex:inputField label="Opportunity Type" value="{!o.Opportunity_Type__c}"/>
+          <apex:inputField label="Sales Status" value="{!o.Sales_Status__c}"/>
+          <apex:inputField label="Currency Type" value="{!o.Currency_Type__c}"/>
+          <apex:inputField label="Estimated Value" value="{!o.Estimated_Value_PoC__c}"/>
+          <apex:inputField label="Rough Business Volume" value="{!o.Rough_Business_Volume__c}"/>
+          <apex:inputField label="SaaS Revenue" value="{!o.SaaS_Revenue__c}"/>
+          <apex:inputField label="Forecast" value="{!o.Forecast__c}"/>
+          <apex:inputField label="Chance" value="{!o.Chance__c}"/>
+          <apex:inputField label="OneSMS OpportunityID" value="{!o.OneSMS_OpportunityID__c}"/>
+          <apex:inputField label="BHQ" value="{!o.BHQ__c}"  />
+          <apex:inputField label="DXP Proposal Ref Number" value="{!o.DXP_Proposal_Ref_Number__c}"/>
+      </apex:pageBlockSection>
+        
+      <apex:pageBlockSection title="App Registration">
+          <apex:inputField label="Hosting" value="{!o.Hosting__c}"/><br/>
+          <apex:dataTable value="{!opp}" var="oo" width="100%">
+               <apex:column headerValue="App" width="200px">
+                   <apex:actionSupport event="onchange" action="{!change}" reRender="tech"/> 
+                   <apex:inputField value="{!oo.App__c}"/>
+               </apex:column>
+              <apex:column headerValue="Technologies" width="200Px">
+                 <apex:pageblock >
+                  <apex:pageBlockSection >
+                    <apex:inputField label="Technologies" value="{!oo.Technologies__c}"/>
+                 </apex:pageBlockSection>
+                </apex:pageblock>
+              </apex:column>
+              <apex:column headerValue="Action" width="100px">
+                  <apex:commandLink action="{!callMe}" value="Add"/>
+              </apex:column>
+          </apex:dataTable>
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+   </apex:form>
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page controller="Account_List" >
+   <apex:form id="fm" >
+     <apex:pageBlock >
+       <apex:pageBlockTable value="{!accList}" var="a">
+           <apex:column headerValue="Name" >
+               <apex:outputLink value="/{!a.id}" > {!a.name}</apex:outputLink>
+           </apex:column>
+           <apex:column value="{!a.AccountNumber}" />
+           <apex:column value="{!a.Type}" />
+       </apex:pageBlockTable>
+     </apex:pageBlock>
+   </apex:form>
+</apex:page>

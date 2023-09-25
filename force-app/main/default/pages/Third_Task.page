@@ -1,0 +1,17 @@
+<apex:page controller="Third_Fourth">
+    <apex:pageMessages ></apex:pageMessages>
+    <apex:form >
+      <apex:outputPanel >
+       Name :  <apex:inputText value="{!name}"/>
+           <apex:commandButton value="search" action="{!call}"/> 
+      </apex:outputPanel>
+        <apex:pageblock >
+         <apex:pageBlockTable value="{!accList}" var="a">
+            <apex:column >
+                   <apex:outputLink value="https://websynergies-dev-ed--c.visualforce.com/apex/Third_Task_VF2?id={!a.id}">{!a.name}</apex:outputLink>
+            </apex:column>
+            <apex:column value="{!a.Email__c}"/>
+         </apex:pageBlockTable>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

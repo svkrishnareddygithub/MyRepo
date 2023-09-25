@@ -1,0 +1,25 @@
+<apex:page controller="First_Task" action="{!call}" renderAs="pdf" >
+    <apex:pageBlock >
+      <apex:pageBlockSection title="Contact details">
+              LastName : {!c.lastName}
+      </apex:pageBlockSection>
+        
+      <apex:pageBlockSection title="OpportunityList">
+      <apex:pageBlockTable value="{!opList}" var="a" border="1px">
+          <apex:column value="{!a.name}"/>
+          <apex:column value="{!a.AccountId}"/>
+          <apex:column value="{!a.stageName}" />
+          <apex:column value="{!a.closeDate}"/>
+      </apex:pageBlockTable>
+      </apex:pageBlockSection>
+        
+      <apex:pageBlockSection title="CaseList">
+         <apex:pageBlockTable value="{!cList}" var="b" border="1px">
+          <apex:column value="{!b.AccountId}"/>
+          <apex:column value="{!b.status}"/>
+          <apex:column value="{!b.origin}" />
+        </apex:pageBlockTable>
+      </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+</apex:page>

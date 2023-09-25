@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name="myName" type="String" />
+    <aura:handler name="thirdCall" event="c:App_Events" action="{!c.invoke}"/>
+    <div class="box">
+     Name : {!v.myName}
+    </div>
+</aura:component>

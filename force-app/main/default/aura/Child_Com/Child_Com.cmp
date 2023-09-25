@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name="Name" type="String"/>
+    <aura:registerEvent name="SecondCall" type="c:Lightning_Event" />
+    <aura:handler name="SecondCall" event="c:Lightning_Event" action="{!c.show}"/>
+    <lightning:button label="submit" onclick="{!c.invoke}"/>
+    Name : {!v.Name}
+</aura:component>

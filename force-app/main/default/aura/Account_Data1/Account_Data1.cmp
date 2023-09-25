@@ -1,0 +1,7 @@
+<aura:component controller="ContactList">
+    <aura:registerevent name="MyEvent" type="c:Account_Event" />
+    <lightning:card>
+        <lightning:input label="AccountName" type="String" aura:id="my"/>
+        <lightning:button label="Submit" onclick="{!c.show}"/>
+    </lightning:card>
+</aura:component>

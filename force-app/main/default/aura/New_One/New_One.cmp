@@ -1,0 +1,6 @@
+<aura:component controller="Vf_Lightning">
+    <aura:attribute name="records" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:handler name="init" value="{!this}" action="{!c.show}"/>
+    <lightning:dataTable columns="{!v.columns}" data="{!v.records}" keyField="id"/>
+</aura:component>

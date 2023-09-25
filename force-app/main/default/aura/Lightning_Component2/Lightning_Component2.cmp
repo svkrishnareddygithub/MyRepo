@@ -1,0 +1,9 @@
+<aura:component >
+     <lightning:card>
+            <lightning:recordViewForm recordId="0015j00000DxsdAAAR" objectApiName="Account">
+                <lightning:outputField fieldName="Name"/>
+                <lightning:outputField fieldName="Rating"/>
+                <lightning:outputField fieldName="Phone"/>
+             </lightning:recordViewForm>
+        </lightning:card>
+</aura:component>

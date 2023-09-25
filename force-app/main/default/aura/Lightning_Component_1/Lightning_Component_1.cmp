@@ -1,0 +1,12 @@
+<aura:component >
+    <aura:attribute name="name" type="String"/>
+    <aura:attribute name="age" type="Integer"/>
+    <aura:attribute name="salary" type="decimal"/>
+    <aura:attribute name="city" type="String"/>
+    <div>
+        Name : {!v.name}<br/>
+        Age  : {!v.age} <br/>
+        Salary: {!v.salary}<br/>k
+        City : {!v.city}
+    </div>
+</aura:component>

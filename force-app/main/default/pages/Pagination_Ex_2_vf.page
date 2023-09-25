@@ -1,0 +1,23 @@
+<apex:page controller="Pagination_Ex_2" >
+    <apex:form id="pb">
+      <apex:actionFunction action="{!refresh}" name="ref" reRender="pb" />
+      <apex:pageBlock >
+       <apex:pageBlockTable value="{!Accounts}" var="a">
+           <apex:column value="{!a.name}" />
+           <apex:column value="{!a.rating}" />
+           <apex:column value="{!a.phone}"/>
+       </apex:pageBlockTable>  
+      </apex:pageBlock>
+        
+    <apex:panelGrid columns="10"  >
+             Page: {!con.pageNumber} of {!totalPages} &nbsp;&nbsp;&nbsp;&nbsp; {!totalRecords}
+            <apex:commandbutton value="first" action="{!con.first}" disabled="{!!con.hasPrevious}" reRender="pb" />
+            <apex:commandbutton value="Pre" action="{!con.previous}" disabled="{!!con.hasPrevious}" reRender="pb"/>
+            <apex:commandbutton value="next" action="{!con.next}" disabled="{!!con.hasNext}" reRender="pb"/>
+            <apex:commandbutton value="Last" action="{!con.last}" disabled="{!!con.hasNext}" reRender="pb"	/>
+          <apex:selectList value="{!size}" size="1" multiselect="false" onchange="ref();" >
+              <apex:selectOptions value="{!options}"  />
+          </apex:selectList>
+    </apex:panelGrid>
+    </apex:form> 
+</apex:page>

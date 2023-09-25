@@ -1,0 +1,10 @@
+<apex:page controller="ConditionalSearch_First" action="{!pdf}" renderAs="pdf">
+   	<apex:pageBlock >
+      <apex:pageBlockTable value="{!acc}" var="a" border="2px">
+          <apex:column value="{!a.Id}" />
+          <apex:column value="{!a.Name}" />
+          <apex:column value="{!a.Email__c}" />
+          <apex:column value="{!a.Phone}" />
+      </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

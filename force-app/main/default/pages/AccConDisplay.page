@@ -1,0 +1,10 @@
+<apex:page controller="AccountAndContactDisplay" >
+    <apex:pageBlock >
+      <apex:pageBlockTable value="{!accList}" var="a">
+          <apex:column value="{!a.name}" headerValue="Name" />
+          <apex:column value="{!a.Rating}" headerValue="Rating"/>
+          <apex:variable var="sr" value="{!a.contacts.size}"/>
+          <apex:column value="{!a.contacts[0].lastName}" headerValue="Contacts"/>
+       </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

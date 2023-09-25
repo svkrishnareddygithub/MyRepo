@@ -1,0 +1,18 @@
+<apex:page controller="Edit_Book_Details">
+   <apex:form >
+    <apex:outputPanel >
+       <apex:inputText value="{!searchText}" />
+          <apex:commandButton value="search" action="{!call}" />
+    </apex:outputPanel>
+   <apex:pageblock >
+      <apex:pageBlockTable value="{!bookList}" var="a">
+          <apex:column headerValue="Name" value="{!a.Name}"/>
+          <apex:column headerValue="BookName" value="{!a.Book_Name__c}"/>
+          <apex:column headerValue="Auther" value="{!a.Book_Auther__c}"/>
+          <apex:column headerValue="cost" value="{!a.Cost__c}"/>
+          <apex:column headerValue="totalCopies"  value="{!a.Total_Copies__c}"/>
+          <apex:column headerValue="AvailbaleCopies"  value="{!a.Available_Copies__c}"/>
+       </apex:pageBlockTable>
+   </apex:pageblock>
+  </apex:form>
+</apex:page>

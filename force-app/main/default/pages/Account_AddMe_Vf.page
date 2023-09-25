@@ -1,0 +1,22 @@
+<apex:page controller="Account_AddMe">
+    <apex:sectionHeader title="Account"/>
+  <apex:form >
+    <apex:dataTable value="{!accList}" var="a" frame="border" rules="rows" cellpadding="5px" width="100%">
+        <apex:column headerValue="Name" >
+            <apex:inputText value="{!a.Name}"/>
+        </apex:column>
+        <apex:column headerValue="Rating" >
+            <apex:inputText value="{!a.rating}"/>
+        </apex:column>
+        <apex:column headerValue="Phone">
+            <apex:inputText value="{!a.phone}"/>
+        </apex:column>
+        <apex:column headerValue="Industry" >
+            <apex:inputText value="{!a.industry}"/>
+        </apex:column>
+        <apex:column headerValue="Action">
+          <apex:commandButton value="AddMe" action="{!call}"/>
+        </apex:column>
+    </apex:dataTable>
+   </apex:form>
+</apex:page>

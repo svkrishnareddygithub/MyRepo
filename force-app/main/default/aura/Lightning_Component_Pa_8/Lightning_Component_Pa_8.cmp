@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="name" type="String" />
+    <aura:handler name="firstEvent" event="c:Lightning_Event_1" action="{!c.call}"/>
+    <c:Lightning_Component_8/>
+    Name: {!v.name}
+</aura:component>

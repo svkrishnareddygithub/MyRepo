@@ -1,0 +1,4 @@
+<aura:component >
+    <aura:registerEvent name="firstCall" type="c:Lightning_Event"/>
+    <lightning:button label="Save" onclick="{!c.call}"/>
+</aura:component>

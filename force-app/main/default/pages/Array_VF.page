@@ -1,0 +1,9 @@
+<apex:page controller="Array_Account" action="{!call}" >
+    <apex:form >
+    <apex:outputPanel >
+       <apex:selectList size="1" >
+           <apex:selectOptions value="{!options}"/>
+       </apex:selectList>
+    </apex:outputPanel>
+   </apex:form>
+</apex:page>

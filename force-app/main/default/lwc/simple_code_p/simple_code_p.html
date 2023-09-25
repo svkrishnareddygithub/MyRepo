@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="ContactList">
+        <c-simple_code onpass={passtomethod} ></c-simple_code>
+        <lightning-datatable key-field="Id" columns={col} data={krishna.data}></lightning-datatable>
+
+        <table>
+          <thead>
+            <tr>
+                <th>LastName</th> 
+                <th>FirstName</th>
+                <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <template for:each={krishna.data} for:item="val">
+                <tr key={val}>
+                    <td>{val.LastName}</td>
+                    <td>{val.FirstName}</td>
+                    <td>{val.Email}</td>
+                </tr>
+            </template>
+          </tbody>
+        </table>
+    </lightning-card>
+</template>

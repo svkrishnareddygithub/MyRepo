@@ -1,0 +1,12 @@
+<apex:page controller="Speed_Calculation" >
+    <apex:form >
+      <apex:pageBlock title="Calculation" >
+        <apex:pageBlockSection title="Speed Calculation" columns="1">
+          <apex:inputText value="{!distance}" label="Distance KM " />
+          <apex:inputText value="{!timee}" label="Time In Minutes" />
+            <apex:outputText value="{!speed}" label="Speed KM/Min"  />
+        </apex:pageBlockSection>
+        <apex:commandButton action="{!speed_Calculation}" value="Submit"  />
+      </apex:pageBlock>
+    </apex:form>
+</apex:page>

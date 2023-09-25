@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="MyName" type="string"/>
+    <aura:handler name="firstCall" event="c:Lightning_Event" action="{!c.invoke}"/>
+    <c:Child_Event/>
+    Name : {!v.MyName}
+</aura:component>

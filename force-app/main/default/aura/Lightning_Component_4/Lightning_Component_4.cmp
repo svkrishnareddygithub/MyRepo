@@ -1,0 +1,12 @@
+<aura:component >
+
+        <lightning:input label="fName" aura:id="fName"/>
+        <lightning:input label="lName" aura:id="lName"/>
+        <aura:attribute name="Name" type="String" />
+        <lightning:button label="Submit" onclick="{!c.call}"/>
+         
+        <div>
+          Name: {!v.Name}
+        </div>
+
+</aura:component>

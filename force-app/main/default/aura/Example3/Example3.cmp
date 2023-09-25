@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute name="Aval" type="Integer"/>
+    <aura:attribute name="Bval" type="Integer" />
+    <aura:attribute name="Result" type="Integer" />
+    <lightning:input label="AVal" type="number" value="{!v.Aval}"/>
+    <lightning:input label ="Bval" type="number" value="{!v.Bval}" />
+    <lightning:input label="Result" type="number" value="{!v.Result}"/>
+    <lightning:button label="Add" onclick="{!c.call}"/>
+    <div>
+        Aval:{!v.Aval} <br/>
+        Bval:{!v.Bval} <br/>
+        Result:{!v.Result}
+    </div>
+</aura:component>

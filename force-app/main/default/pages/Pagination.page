@@ -1,0 +1,25 @@
+<apex:page controller="Pagination">
+    <apex:form >
+        <apex:actionFunction name="ref" action="{!refreshPageSize}" reRender="pb" />
+      <apex:pageblock id="pb">
+        <apex:pageBlockTable value="{!Accounts}" var="a">
+            <apex:column >
+             <apex:facet name="header" ><apex:inputCheckbox /></apex:facet>
+                <apex:inputCheckbox />
+            </apex:column>
+            <apex:column value="{!a.name}" headerValue="Name"/>
+            <apex:column value="{!a.rating}" headerValue="Rating"/>
+            <apex:column value="{!a.phone}"  headerValue="Phone"/>
+        </apex:pageBlockTable>  
+      </apex:pageblock>
+      <apex:panelGrid columns="10" >
+        <apex:selectList value="{!size}" multiselect="false" size="1" onchange="ref();" >
+            <apex:selectoptions value="{!options}" />
+        </apex:selectList>
+        <apex:commandButton reRender="pb" value="First" action="{!controller.first}" disabled="{!!controller.hasPrevious}"/> 
+                <apex:commandButton reRender="pb" value="Previous" action="{!controller.previous}" disabled="{!!controller.hasPrevious}" /> 
+        <apex:commandButton value="Next" action="{!controller.next}" disabled="{!!controller.hasNext}" reRender="pb"/>
+        <apex:commandButton value="Last" action="{!controller.last}" disabled="{!!controller.hasNext}" reRender="pb"/>
+      </apex:panelGrid>
+    </apex:form>
+</apex:page>

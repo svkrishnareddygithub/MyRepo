@@ -1,0 +1,13 @@
+<apex:page controller="Sixth_Task" >
+    <apex:form >
+    <apex:pageBlock title="Opportunity Details">
+        <apex:commandButton value="Submit" action="{!submit}" />
+        <apex:pageBlockSection >
+            <apex:inputText value="{!op.name}" label="Name"/>
+            <apex:inputText value="{!op.stageName}" label="StageName"/>
+            <apex:inputText value="{!op.closeDate}" label="Closedate"/>
+            <apex:inputText value="{!op.amount}" label="Amount"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+   </apex:form>
+</apex:page>

@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Account List">
+        <table>
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>Name</th>
+                    <th>Rating</th>
+                    <th>Phone</th>
+                    <th>Industry</th>
+                </tr>
+            </thead>
+            <tbody>
+              <template for:each={krishna.data} for:item="accItem">
+                <tr key={accItem.Id}>
+                    <td><lightning-input type="checkBox" name="radioButtonSelect" value={accItem.Id} onchange={handleMe}></lightning-input></td>
+                    <td>{accItem.Name}</td>
+                    <td>{accItem.Rating}</td>
+                    <td>{accItem.Phone}</td>
+                    <td>{accItem.Industry}</td>
+                </tr>
+              </template>
+            </tbody>
+        </table>
+    </lightning-card>
+    <lightning-button label="Show Con" onclick={show}></lightning-button>
+</template>

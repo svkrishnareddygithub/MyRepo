@@ -1,0 +1,17 @@
+<apex:page controller="Contact_Insert">
+    <apex:sectionHeader title="InsertContact"/>
+    <apex:form >
+        <apex:pageMessages id="pm" />
+       <apex:pageBlock >
+           <apex:pageBlockButtons >
+               <apex:commandButton value="Save" action="{!saveCon}" reRender="pm" />       
+           </apex:pageBlockButtons>
+           <apex:pageBlockSection >
+             <apex:inputText value="{!lastName}" label="LastName"/>
+             <apex:inputText value="{!firstName}" label="FirstName"/>
+               <apex:inputText value="{!phone}" label="Phone"/>
+               <apex:inputText value="{!email}" label="Email"/>
+           </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

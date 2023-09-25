@@ -1,0 +1,24 @@
+<apex:page standardController="Account" recordSetVar="items">
+    <apex:form >
+    <apex:pageBlock >
+       <apex:pageBlockTable value="{!items}" var="a">
+           <apex:column value="{!a.Name}" headerValue="Name"/>
+           <apex:column value="{!a.Rating}" headerValue="Rating"/>
+           <apex:column value="{!a.phone}" headerValue="Phone"/>
+           <apex:column headerValue="contacts">
+              <apex:pageblock >
+                <apex:pageBlockTable value="{!a.contacts}" var="b">
+                    <apex:column >
+                       <apex:facet name="header"><apex:inputCheckbox /></apex:facet>
+               		   <apex:inputCheckbox />
+                    </apex:column>
+                    <apex:column value="{!b.lastName}"/>
+                    <apex:column value="{!b.firstName}"/>
+                    <apex:column value="{!b.email}"/>
+                 </apex:pageBlockTable>
+             </apex:pageblock>
+           </apex:column>
+       </apex:pageBlockTable>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

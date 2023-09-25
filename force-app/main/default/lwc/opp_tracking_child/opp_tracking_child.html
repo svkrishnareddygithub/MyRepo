@@ -1,0 +1,35 @@
+<template>
+    <lightning-layout size="12">
+        <lightning-layout-item size="3">
+           <template if:true={appData.data}>
+              <lightning-combobox
+                         onchange={cptrApp}
+                         options={appData.data.values}
+                         class="slds-var-p-around_large">
+              </lightning-combobox>
+           </template>
+        </lightning-layout-item>
+      
+        <lightning-layout-item size="9">
+          <lightning-layout size="12">
+              <lightning-layout-item size="5">
+                <lightning-dual-listbox name="Technologies"
+                                        label="Select Technologies"
+                                        source-label="Available"
+                                        selected-label="Selected"
+                                        field-level-help="Select your preferred languages"
+                                        options={techValues}
+                                        onchange={cptrTech}></lightning-dual-listbox>
+              </lightning-layout-item>
+              <lightning-layout-item size="5">
+                <template if:true={selectedtechValues}>
+                    <template for:each={selectedtechValues} for:item="sel">
+                        <p key={sel}></p>
+                    </template>
+                </template>
+              </lightning-layout-item>
+          </lightning-layout>
+        </lightning-layout-item>
+         
+   </lightning-layout>
+</template>

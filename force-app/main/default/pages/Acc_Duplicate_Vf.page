@@ -1,0 +1,15 @@
+<apex:page controller="Acc_Duplicate">
+    <apex:sectionHeader title="Account Form"/>
+    <apex:form >
+     <apex:pageMessages id="fm"></apex:pageMessages>
+    <apex:pageBlock >
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!call}" reRender="fm" />
+        </apex:pageBlockButtons>
+      <apex:pageBlockSection >
+         <apex:inputField value="{!acc.name}"/>
+          <apex:inputField value="{!acc.rating}"/>
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+   </apex:form>
+</apex:page>

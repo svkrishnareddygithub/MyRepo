@@ -1,0 +1,7 @@
+<aura:component controller="Aura_MethodClass" >
+    <c:Aura_Method aura:id="cMethod"/>
+    <lightning:input label="Enter Name" type="String" aura:id="name"/>
+    <lightning:input label="Enter Rating" type="String" aura:id="rating"/>
+    <lightning:input label="Enter Phone" type="String" aura:id="phone"/>
+    <lightning:button label="Save" onclick="{!c.invoke}"/>
+</aura:component>

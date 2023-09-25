@@ -1,0 +1,47 @@
+<template>
+    <div class="slds-align_absolute-center" style="margin-top:10%;margin-bottom:10%;margin-left:10%;margin-right:10%;position:relative;">
+        <div style="border: 2px dashed rgb(131, 43, 43); width: 150px;height: 150px; border-radius:50%;float:left " class="slds-align_absolute-center"  >
+            <div  class="slds-align_absolute-center down" >
+                <img src={downloadSymbol} alt="loading" style="max-height:50% ;max-width:50%"></img>
+            </div> 
+        </div>
+        <div  style="width:50% ;height:100%;">
+            
+            <button data-my-id="btn1"  style="width: 40%;height:30px; border:2px solid rgb(131, 43, 43);text-align: center;border-radius:6px" onclick={productionUnit} value="Production Unit">
+                <div style="float: left; ">
+                    <span style="border: 1px solidrgb(131, 43, 43); border-radius:4px ;box-shadow:0px 1px 5px;text-align:center;background-color:white">
+                        <strong >&nbsp; M &nbsp;</strong>
+                    </span>
+                    <span style="border-right:1px solid rgb(131, 43, 43);margin-left: 10px;">
+                    </span>
+                </div>
+                <span><strong>Production Unit</strong></span>
+            </button>
+            <br>
+            <button data-my-id="btn2"  style="width: 40%; height:30px; border:2px solid rgb(131, 43, 43);text-align: center;border-radius:6px;margin-top:10%" onclick={supplierUnit} value="Supplier Unit">
+                <div style="float: left;">
+                    <span style="border: 1px solid rgb(131, 43, 43); border-radius:4px;box-shadow:0px 1px 5px; text-align:center;background-color:white">
+                        <strong >&nbsp;&nbsp; P &nbsp;</strong>
+                    </span>
+                    <span style="border-right:1px solid rgb(131, 43, 43);margin-left: 10px;">
+                    </span>
+                </div>
+                <span><strong >Supplier Unit</strong></span>
+            </button>
+            <br>
+            <button data-my-id="btn3"  style="width: 40%;height:30px; border:2px solid rgb(131, 43, 43);text-align: center;border-radius:6px;margin-top:10%" onclick={deliveryUnit} value="Delivery Unit">
+                <div style="float: left;">
+                    <span style="border: 1px solid rgb(131, 43, 43); border-radius:4px;box-shadow:0px 1px 5px;text-align:center;background-color:white">
+                        <strong >&nbsp;&nbsp; D &nbsp;</strong>
+                    </span>
+                    <span style="border-right:1px solid rgb(131, 43, 43);margin-left: 10px;">
+                    </span>
+                </div>
+                <span><strong >Delivery Unit</strong></span>
+            </button>
+        </div>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</template>

@@ -1,0 +1,14 @@
+<aura:component controller="Application_Level_Evt_Class" >
+    <aura:attribute name="con" type="Contact[]"/>
+    <aura:handler event="c:Lightning_Component_Event_9" action="{!c.call}"/>
+    <table class="box">
+        <tr>
+         <th>LastName</th>
+        </tr>
+        <aura:iteration items="{!v.con}" var="a">
+          <tr>
+            <td>{!a.LastName}</td>
+          </tr>
+        </aura:iteration>
+     </table>
+</aura:component>

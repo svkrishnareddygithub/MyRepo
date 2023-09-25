@@ -1,0 +1,14 @@
+<aura:component >
+	<lightning:accordion >
+       <lightning:accordionSection label="EmployeeDetails" >
+           <lightning:input label="Name" type="String" aura:id="name"/>
+           <lightning:input label="Company" type="String" aura:id="company" />
+           <lightning:input label="salary" type="decimal" aura:id="salary"/>
+       </lightning:accordionSection>
+        <lightning:accordionSection label="ContactDetails">
+            <lightning:input label="FirstName" type="String" aura:id="fName" />
+            <lightning:input label="LastName" type="String" aura:id="lName"/>
+            <lightning:input label="Name" type="String"  aura:id="sName"/>
+        </lightning:accordionSection>
+    </lightning:accordion>
+</aura:component>

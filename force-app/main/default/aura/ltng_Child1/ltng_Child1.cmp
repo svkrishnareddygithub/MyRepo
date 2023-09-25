@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="Name" type="String"/>
+    <aura:attribute name="Rating" type="String"/>
+    <aura:attribute name="Phone" type="String"/>
+    <aura:handler  event="c:ltng_App_Event" action="{!c.show}"/>
+	<lightning:card title="Account" iconName="standard:account">
+&nbsp;&nbsp;&nbsp;Name : {!v.Name} &nbsp;&nbsp;&nbsp;&nbsp; Rating : {!v.Rating} &nbsp;&nbsp;&nbsp;&nbsp;  Phone : {!v.Phone}
+    </lightning:card>
+</aura:component>

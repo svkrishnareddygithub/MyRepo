@@ -1,0 +1,34 @@
+<template>
+    <lightning-card>
+        <lightning-accordion>
+            
+            <lightning-accordion-section name="Seed" label="Seed">
+                <div class="box">
+                    <lightning-input label="Ucase Name(Name)" type="text" onchange={NameHandler}></lightning-input>
+                    <template if:true={showBizDomin}>
+                        <lightning-combobox 
+                                            name="Biz Domain"
+                                            label="Biz Domain"
+                                            options={BizDomainValues}
+                                            required="true"
+                                            onchange={bizDominHandler}
+                        ></lightning-combobox>
+                    </template>
+                    <template if:true={showdependent}>
+                        <lightning-dual-listbox name="Sub Domain"
+                                                        label="Sub Domain"
+                                                        source-label="Available"
+                                                        selected-label="Selected"
+                                                        field-level-help="Select your preferred Domaines"
+                                                        options={finalDependentVal}
+                                                        disabled={dependentDisabled} 
+                                                        onchange={subDomineHandler}>
+                        </lightning-dual-listbox>
+                    </template>
+                    <lightning-input label="Description" type="Max Length" onchange={descHandler}></lightning-input>
+                    <lightning-input label="Source" type="text" onchange={sourceHandler}></lightning-input> 
+                </div>
+            </lightning-accordion-section>
+        </lightning-accordion>
+    </lightning-card>
+</template>
