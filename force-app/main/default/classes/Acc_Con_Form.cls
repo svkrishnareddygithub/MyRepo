@@ -8,6 +8,7 @@ public class Acc_Con_Form {
     public String opName       {set;get;}
     public String stageName    {set;get;}
     public Date closeDate     {set;get;}
+//conflicts
     List<Account> accList;
     public void create(){
         Account acc=new Account();
