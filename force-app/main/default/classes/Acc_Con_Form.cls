@@ -10,6 +10,7 @@ public class Acc_Con_Form {
     public Date closeDate     {set;get;}
 
 //conflicts
+//1
 
     List<Account> accList;
     public void create(){
