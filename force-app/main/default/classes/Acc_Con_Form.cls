@@ -8,7 +8,9 @@ public class Acc_Con_Form {
     public String opName       {set;get;}
     public String stageName    {set;get;}
     public Date closeDate     {set;get;}
-//conflicts1
+
+//conflicts
+
     List<Account> accList;
     public void create(){
         Account acc=new Account();
@@ -17,6 +19,7 @@ public class Acc_Con_Form {
         acc.Industry=industry;
         insert acc;
         //sharooq1st
+        // new change in newBranch1
         Contact con=new Contact();
         con.LastName=lastName;
         con.FirstName=firstName;
