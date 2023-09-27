@@ -1,4 +1,4 @@
-public with sharing class Account_Insert {
+public with sharing class Account_Insert {// conflicts star1
     //changes from star2
     @AuraEnabled(cacheable=true)
     public static void create(String name,String rating,String phone) {
@@ -8,4 +8,5 @@ public with sharing class Account_Insert {
         a.Phone=phone;
         insert a;
     }
+    //star1 branch changes
 }
