@@ -4,5 +4,6 @@ public class Example1 {
     public void call(){
         name='krishna';
         city='hyd';
+        //conflict
     }
 }
