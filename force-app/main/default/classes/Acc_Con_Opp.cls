@@ -12,10 +12,14 @@ public class Acc_Con_Opp {
         opp.StageName='prospecting';
         opp.Name='Ac';
         opp.AccountId=acc.Id;
+<<<<<<< HEAD
         insert opp;
         con=new Contact();
         con.LastName='sanju';
         con.AccountId=acc.Id;
         insert con;
+=======
+        insert opp; 
+>>>>>>> star2
   }
 }
