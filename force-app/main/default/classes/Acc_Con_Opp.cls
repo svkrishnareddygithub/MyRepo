@@ -1,6 +1,6 @@
 public class Acc_Con_Opp {
     public Account acc {set;get;}
-    public Contact con {set;get;}
+    public Contact con1 {set;get;}
     public Opportunity opp {set;get;}
     
     public void call(){
@@ -13,9 +13,9 @@ public class Acc_Con_Opp {
         opp.Name='Ac';
         opp.AccountId=acc.Id;
         insert opp;
-        con=new Contact();
-        con.LastName='sanju';
-        con.AccountId=acc.Id;
-        insert con;
+        con1=new Contact();
+        con1.LastName='sanju';
+        con1.AccountId=acc.Id;
+        insert con1; 
   }
 }
