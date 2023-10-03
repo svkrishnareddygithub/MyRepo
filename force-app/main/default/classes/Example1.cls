@@ -5,5 +5,6 @@ public class Example1 {
         name='krishna';
         city='hyd';
         //added
+        //conflict
     }
 }
