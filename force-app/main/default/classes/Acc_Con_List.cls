@@ -8,8 +8,8 @@ public with sharing class Acc_Con_List {
        
         List<Contact> listCon= [select Id,LastName,FirstName,Email,AccountId from Contact where AccountId IN :accId];
         
-        system.debug(listCon.size());
+        system.debug(listCon.size()); 
      return listCon ;
-
+   // sharoooq changesss
     }
 }
