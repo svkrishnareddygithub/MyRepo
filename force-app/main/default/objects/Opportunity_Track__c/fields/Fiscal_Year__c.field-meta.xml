@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fiscal_Year__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((!ISBLANK(Forecast__c )) ,IF((AND((AND((DAY(Forecast__c )&gt;=1),(MONTH(Forecast__c)&gt;=4))))),&apos;FY&apos;+TEXT(YEAR(Forecast__c)-((FLOOR((YEAR(Forecast__c)/100)))*100)), &apos;FY&apos;+TEXT((YEAR(Forecast__c)-((FLOOR((YEAR(Forecast__c)/100)))*100))-1)), &apos;No Forecast&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Fiscal Year</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

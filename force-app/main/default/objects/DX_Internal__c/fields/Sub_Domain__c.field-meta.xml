@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Domain__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Domain</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Biz_Domain__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Temp Sub Biz 2</fullName>
+                <default>false</default>
+                <label>Temp Sub Biz 2</label>
+            </value>
+            <value>
+                <fullName>Temp Sub Biz 1</fullName>
+                <default>false</default>
+                <label>Temp Sub Biz 1</label>
+            </value>
+            <value>
+                <fullName>Sub Biz1</fullName>
+                <default>false</default>
+                <label>Sub Biz1</label>
+            </value>
+            <value>
+                <fullName>11121</fullName>
+                <default>false</default>
+                <label>11121</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>BIZ!@</controllingFieldValue>
+            <controllingFieldValue>test123</controllingFieldValue>
+            <valueName>Sub Biz1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Temp Biz 1</controllingFieldValue>
+            <controllingFieldValue>Temp Biz 2</controllingFieldValue>
+            <controllingFieldValue>test123</controllingFieldValue>
+            <valueName>Temp Sub Biz 2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Temp Biz 1</controllingFieldValue>
+            <controllingFieldValue>test123</controllingFieldValue>
+            <valueName>Temp Sub Biz 1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>title12311</controllingFieldValue>
+            <valueName>11121</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

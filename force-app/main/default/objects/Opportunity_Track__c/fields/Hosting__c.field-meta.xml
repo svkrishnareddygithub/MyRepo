@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hosting__c</fullName>
+    <externalId>false</externalId>
+    <label>Hosting</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>YDX</fullName>
+                <default>false</default>
+                <label>YDX</label>
+            </value>
+            <value>
+                <fullName>Y-Azure</fullName>
+                <default>false</default>
+                <label>Y-Azure</label>
+            </value>
+            <value>
+                <fullName>Y-AWS</fullName>
+                <default>false</default>
+                <label>Y-AWS</label>
+            </value>
+            <value>
+                <fullName>Customer Cloud</fullName>
+                <default>false</default>
+                <label>Customer Cloud</label>
+            </value>
+            <value>
+                <fullName>on Premises</fullName>
+                <default>false</default>
+                <label>on Premises</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

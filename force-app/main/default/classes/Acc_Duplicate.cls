@@ -3,7 +3,6 @@ public class Acc_Duplicate {
     public Acc_Duplicate(){
         acc=new Account();
     }
-    //changes from star2 branch
     public PageReference call(){
         PageReference p;
         List<Account> accList=[select id,Name,Rating,Phone from Account where name=:acc.name];
@@ -17,5 +16,4 @@ public class Acc_Duplicate {
         }
         return p;
     }
-    //changes in star1Branch
 }

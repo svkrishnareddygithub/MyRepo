@@ -15,7 +15,6 @@ public class Acc_Con_Form {
         acc.Rating=rating;
         acc.Industry=industry;
         insert acc;
-        //sharooq1st
         Contact con=new Contact();
         con.LastName=lastName;
         con.FirstName=firstName;
@@ -29,5 +28,5 @@ public class Acc_Con_Form {
         op.AccountId=acc.Id;
         insert op;
     }
-    //githubdesktop    
+    
 }

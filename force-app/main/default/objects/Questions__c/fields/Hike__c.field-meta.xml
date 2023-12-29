@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hike__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Emp_Grade__c , &apos;A band&apos;, (Salary__c  * 0.30), &apos;B band&apos;,  (Salary__c  * 0.25), &apos;C band&apos;,  (Salary__c  * 0.20), Salary__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Hike</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

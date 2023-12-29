@@ -4,7 +4,7 @@ trigger sivalingaTask on Account (after insert, after update) {
     for(Account a: trigger.new){
         if(a.Industry=='Banking')
             conlist=accMap.get(a.Id).contacts;
-	}
+    }
     List<Contact> newConList=new List<Contact>();
     for(Contact c: conlist){
         Account acc=accMap.get(c.AccountId);

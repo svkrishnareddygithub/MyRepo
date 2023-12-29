@@ -30,7 +30,7 @@ trigger Shiva_Trigger on Opportunity (after update,after insert) {
     update acc;
 }
     
-    /*	
+    /*  
     set<Id> ids=new set<Id>();
     for(Opportunity o:trigger.new)
     {
@@ -41,7 +41,7 @@ trigger Shiva_Trigger on Opportunity (after update,after insert) {
     List<Account> updateList=new List<Account>();
     for(Account a:accList)
     {
-	    a.AnnualRevenue=0;
+        a.AnnualRevenue=0;
         for(Opportunity oo:a.opportunities)
         {
             if(oo.Amount!=null)
@@ -57,7 +57,7 @@ trigger Shiva_Trigger on Opportunity (after update,after insert) {
     Map<Id,Account> accMap=new Map<Id,Account>([select id,name,description from Account]);
     List<Account> liUpdate=new List<Account>();
     for(Opportunity o: trigger.new)
-    {	
+    {   
         if(o.stageName=='Closed Won')
         {
             Account a=accMap.get(o.AccountId);
@@ -67,7 +67,7 @@ trigger Shiva_Trigger on Opportunity (after update,after insert) {
     }
     update liUpdate;
     
-    	
+        
      // Without Map
       Set<Id> accIds=new Set<Id>();
       for(Opportunity o: trigger.new)

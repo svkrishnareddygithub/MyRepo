@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Sales_Region__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Sales Region</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Sales_Region__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>yru</fullName>
+                <default>false</default>
+                <label>yru</label>
+            </value>
+            <value>
+                <fullName>SubYLQ1</fullName>
+                <default>false</default>
+                <label>SubYLQ1</label>
+            </value>
+            <value>
+                <fullName>ylm</fullName>
+                <default>false</default>
+                <label>ylm</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>YLQ</controllingFieldValue>
+            <valueName>SubYLQ1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>YLM</controllingFieldValue>
+            <valueName>ylm</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>YRU</controllingFieldValue>
+            <valueName>yru</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

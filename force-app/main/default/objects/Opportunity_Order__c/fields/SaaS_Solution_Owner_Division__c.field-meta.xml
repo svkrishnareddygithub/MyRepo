@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SaaS_Solution_Owner_Division__c</fullName>
+    <externalId>false</externalId>
+    <label>SaaS Solution Owner Division</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CMU YRB</fullName>
+                <default>false</default>
+                <label>CMU YRB</label>
+            </value>
+            <value>
+                <fullName>CMU YCL</fullName>
+                <default>false</default>
+                <label>CMU YCL</label>
+            </value>
+            <value>
+                <fullName>KBC</fullName>
+                <default>false</default>
+                <label>KBC</label>
+            </value>
+            <value>
+                <fullName>1111</fullName>
+                <default>false</default>
+                <label>1111</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

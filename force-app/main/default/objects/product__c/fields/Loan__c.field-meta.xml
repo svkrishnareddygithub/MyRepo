@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loan__c</fullName>
+    <externalId>false</externalId>
+    <label>Loan</label>
+    <summaryFilterItems>
+        <field>order__c.Payment_Mode__c</field>
+        <operation>equals</operation>
+        <value>Loan</value>
+    </summaryFilterItems>
+    <summaryForeignKey>order__c.ProductName__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

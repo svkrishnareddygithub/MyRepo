@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Technologies__c</fullName>
+    <externalId>false</externalId>
+    <label>Technologies</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IIoT</fullName>
+                <default>false</default>
+                <label>IIoT</label>
+            </value>
+            <value>
+                <fullName>IT/Cloud Managed Services</fullName>
+                <default>false</default>
+                <label>IT/Cloud Managed Services</label>
+            </value>
+            <value>
+                <fullName>IT-OT Integration</fullName>
+                <default>false</default>
+                <label>IT-OT Integration</label>
+            </value>
+            <value>
+                <fullName>Robotic</fullName>
+                <default>false</default>
+                <label>Robotic</label>
+            </value>
+            <value>
+                <fullName>Security</fullName>
+                <default>false</default>
+                <label>Security</label>
+            </value>
+            <value>
+                <fullName>Operation Management</fullName>
+                <default>false</default>
+                <label>Operation Management</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Decd24 Opp</fullName>
+                <default>false</default>
+                <label>Decd24 Opp</label>
+            </value>
+            <value>
+                <fullName>OPP D241</fullName>
+                <default>false</default>
+                <label>OPP D241</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

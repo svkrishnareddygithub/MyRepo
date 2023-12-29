@@ -10,7 +10,5 @@ public class Acc_Opp_Update {
            }
        }
        update oList;
-       //testBranch Update
-       //kamal,jan,saam
    }
 }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Technology__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Technology</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sub Selenium</fullName>
+                <default>false</default>
+                <label>Sub Selenium</label>
+            </value>
+            <value>
+                <fullName>Sub API</fullName>
+                <default>false</default>
+                <label>Sub API</label>
+            </value>
+            <value>
+                <fullName>techno</fullName>
+                <default>false</default>
+                <label>techno</label>
+            </value>
+            <value>
+                <fullName>Sub Java</fullName>
+                <default>false</default>
+                <label>Sub Java</label>
+            </value>
+            <value>
+                <fullName>Code</fullName>
+                <default>false</default>
+                <label>Code</label>
+            </value>
+            <value>
+                <fullName>Core</fullName>
+                <default>false</default>
+                <label>Core</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

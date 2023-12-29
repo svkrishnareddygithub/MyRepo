@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CTC_Rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (  Current_CTC__c  &gt; 200000,
+        ISBLANK( Pan_Number__c )
+)</errorConditionFormula>
+    <errorMessage>Pan Number Can not be blank</errorMessage>
+</ValidationRule>
