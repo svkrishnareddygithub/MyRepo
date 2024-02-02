@@ -1,6 +1,6 @@
 public class ManualApprovalStepsAutomation {
     
-    
+    /*
     public static void SourceFieldUpdate(List<copado__Deployment__c> deployments){
         
         List<copado__Deployment__c> deploymentListFilter = [SELECT Id, copado__From_Org__c,Is_Submitted_For_Approval__c,copado__Completed__c, copado__Promotion__c,copado__Promotion__r.Approval_Status__c, copado__From_Org__r.Name,Promotion_Approval_Status__c,
@@ -21,10 +21,11 @@ public class ManualApprovalStepsAutomation {
             update promUpdateSource;
         }
     }
+*/
     
     
 
-    public static void callMe(List<copado__Deployment__c> deployments  , Map<Id, copado__Deployment__c> oldMap) {
+    public static void stepsToBeAutomate(List<copado__Deployment__c> deployments  , Map<Id, copado__Deployment__c> oldMap) {
         
         Set<Id> promotionIds = new Set<Id>();
         for (copado__Deployment__c deployment : deployments) {
@@ -41,6 +42,7 @@ public class ManualApprovalStepsAutomation {
                                                             FROM copado__Deployment__c WHERE Id IN :deployments];
         
 		copado__Promotion__c promotinrec =new copado__Promotion__c();
+        List<copado__Deployment__c> updateDeployments=new List<copado__Deployment__c>();
         
         if(!deploymentListFilter.isEmpty()){
         for (copado__Deployment__c c : deploymentListFilter) {
@@ -68,9 +70,10 @@ public class ManualApprovalStepsAutomation {
                         }
                     } 
         		}
-            }else if(c.copado__Status__c == 'Cancelled'){
+            }
+            else if(c.copado__Status__c == 'Cancelled' &&  c.Is_Submitted_For_Approval__c==true){
                 c.Is_Submitted_For_Approval__c=false;
-                c.Promotion_Approval_Status__c='';
+                updateDeployments.add(c);
             }
          }
         }
@@ -81,29 +84,30 @@ public class ManualApprovalStepsAutomation {
                                              FROM copado__step__c where Id IN: approvalSteps];
         List<copado__Deployment_Job__c> jobs=new List<copado__Deployment_Job__c>();
         
-        List<copado__Deployment__c> updateDeployments=new List<copado__Deployment__c>();
         copado__Deployment__c stepstobeCancel=new copado__Deployment__c();
-            
-        for(copado__step__c c: filterSteps){
-                if(c.copado__Deployment__r.Promotion_Approval_Status__c=='Approved'){
-                    for (copado__Deployment_Job__c j : c.copado__Deployment_Jobs__r) {
-                        j.copado__Status__c = 'Success';
-                        jobs.add(j);
+        
+        if(!filterSteps.isEmpty()){
+            for(copado__step__c c: filterSteps){
+                    if(c.copado__Deployment__r.Promotion_Approval_Status__c=='Approved'){
+                        for (copado__Deployment_Job__c j : c.copado__Deployment_Jobs__r) {
+                            j.copado__Status__c = 'Success';
+                            jobs.add(j);
+                        }
+                         c.copado__Deployment__r.Is_Submitted_For_Approval__c=false;
+                         c.copado__Deployment__r.Promotion_Approval_Status__c='';
+                         updateDeployments.add(c.copado__Deployment__r);
+                    }else if(c.copado__Deployment__r.Promotion_Approval_Status__c=='Rejected'){
+                        for (copado__Deployment_Job__c j : c.copado__Deployment_Jobs__r) {
+                            j.copado__Status__c = 'Failed';
+                            jobs.add(j);
+                        }
+                        c.copado__Deployment__r.Is_Submitted_For_Approval__c=false;
+                        c.copado__Deployment__r.Promotion_Approval_Status__c='';
+                        c.copado__Deployment__r.copado__Status__c='Rejected';
+                        updateDeployments.add(c.copado__Deployment__r);
+                        stepstobeCancel.Id=c.copado__Deployment__c;
                     }
-                     c.copado__Deployment__r.Is_Submitted_For_Approval__c=false;
-                     c.copado__Deployment__r.Promotion_Approval_Status__c='';
-                     updateDeployments.add(c.copado__Deployment__r);
-                }else if(c.copado__Deployment__r.Promotion_Approval_Status__c=='Rejected'){
-                    for (copado__Deployment_Job__c j : c.copado__Deployment_Jobs__r) {
-                        j.copado__Status__c = 'Failed';
-                        jobs.add(j);
-                    }
-                    c.copado__Deployment__r.Is_Submitted_For_Approval__c=false;
-                    c.copado__Deployment__r.Promotion_Approval_Status__c='';
-                    c.copado__Deployment__r.copado__Status__c='Rejected';
-                    updateDeployments.add(c.copado__Deployment__r);
-                    stepstobeCancel.Id=c.copado__Deployment__c;
-                }
+            }
         }
         
         
@@ -130,13 +134,13 @@ public class ManualApprovalStepsAutomation {
     }
     
     // Helper method to check if the record is already submitted for approval
-    private static Boolean isRecordAlreadySubmittedForApproval(Id deploymentId) {
+    public static Boolean isRecordAlreadySubmittedForApproval(Id deploymentId) {
         copado__Deployment__c deployment = [SELECT Is_Submitted_For_Approval__c FROM copado__Deployment__c WHERE Id = :deploymentId LIMIT 1];
         return deployment != null && deployment.Is_Submitted_For_Approval__c;
     }
 
     // Helper method to mark the record as submitted for approval
-    private static void markRecordAsSubmittedForApproval(Id deploymentId) {
+    public static void markRecordAsSubmittedForApproval(Id deploymentId) {
         copado__Deployment__c deploymentToUpdate = new copado__Deployment__c(Id = deploymentId, Is_Submitted_For_Approval__c = true);
         update deploymentToUpdate;
     }
