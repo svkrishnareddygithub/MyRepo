@@ -1,0 +1,28 @@
+<!-- sldsValidatorIgnore -->
+<template>
+        <lightning-card>
+            <lightning-accordion>
+                    <lightning-accordion-section label="Promotion Approval History">
+                        <div class="slds-p-around_medium">
+                            <lightning-combobox
+                                name="example"
+                                label="Select Promotion"
+                                value={selectedValue}
+                                placeholder="Select Promotion"
+                                options={options}
+                                onchange={handleComboboxChange}>
+                            </lightning-combobox>
+                            &ensp;
+                            <template if:true={approvalHistory}>
+                                <lightning-datatable
+                                    key-field="Id"
+                                    data={approvalHistory}
+                                    columns={columns}
+                                    hide-checkbox-column="true">
+                                </lightning-datatable>
+                            </template>
+                        </div>
+                    </lightning-accordion-section>
+            </lightning-accordion>
+        </lightning-card>
+</template>
